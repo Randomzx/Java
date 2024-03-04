@@ -13,17 +13,17 @@ public class Feb28 {
 
 
         Employee0 emp = new HRExecutive0(); // Variable of type Employee can also be used to refer to an object of class HRExecutive because class HRExecutive extends Employe
-        //emp.specialization = new String[] {"Staffing"}; // Variable emp can’t access member specialization defined in class HRExecutive
-        //System.out.println(emp.specialization[0]);
+        emp.specialization = new String[] {"Staffing"}; // Variable emp can’t access member specialization defined in class HRExecutive
+        System.out.println(emp.specialization[0]);
         emp.name = "Pavni Gupta";  // Variable emp can access member name defined in class Employee
-        //System.out.println(emp.name);
-        //emp.conductInterview();  // Variable emp can’t access method conductInterview defined in interface Interviewer
+        System.out.println(emp.name);
+        emp.conductInterview();  // Variable emp can’t access method conductInterview defined in interface Interviewer
 
         Interviewer0 interviewer0 = new HRExecutive0();  //Type of variable interviewer is Interviewe
-        //interviewer0.specialization = new String[] {"Staffing"}; // Variable interviewer can’t access members of class Employee or HRExecutive
-        //System.out.println(interviewer.specialization[0]);
-        //interviewer0.name = "Pavni Gupta";
-        //System.out.println(interviewer0.name);
+        interviewer0.specialization = new String[] {"Staffing"}; // Variable interviewer can’t access members of class Employee or HRExecutive
+        System.out.println(interviewer.specialization[0]);
+        interviewer0.name = "Pavni Gupta";
+        System.out.println(interviewer0.name);
         interviewer0.conductInterview(); // Variable interviewer can access method conductInterview defined in interface Interviewer
 
         Interviewer0[] interviewers = new Interviewer0[2]; // Array of type Interviewer— an interface

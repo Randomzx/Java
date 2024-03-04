@@ -1,0 +1,61 @@
+package Java;
+
+
+
+public class Feb29 {
+    public static void main(String rags[]) {
+        System.out.println("this example");
+        Interviewer m = new Manager();
+        m.submitInterviewStatus();
+
+        System.out.println("\n");
+        System.out.println("super example");
+        Programmer programmer = new Programmer("name", "address", "language");
+        programmer.setNames();
+        programmer.printNames();
+    }
+}
+
+
+interface Interviewer {
+    int MIN_SAL = 9999;
+    default void submitInterviewStatus() {
+        System.out.println(this);
+        System.out.println(this.MIN_SAL);
+        System.out.println(this.print());
+    }
+    String print();
+}
+class Manager implements Interviewer {
+    public String print() {
+        return("I am " + this);
+    }
+}
+
+
+class Employee {
+    String name;
+    String address;
+    Employee() {}
+    Employee(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+
+}
+class Programmer extends Employee {
+    String name;
+    String progLanguage;
+    Programmer(String name, String address, String progLang) {
+        super(name, address);
+        this.progLanguage = progLang;
+    }
+    void setNames() {
+        this.name = "Programmer";
+        super.name = "Employee";
+    }
+    void printNames() {
+        System.out.println(super.name);
+        System.out.println(this.name);
+    }
+}
