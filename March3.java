@@ -1,4 +1,4 @@
-package Java;
+package derived;
 import java.io.FileNotFoundException;
 public class March3 {
 
@@ -21,13 +21,16 @@ public class March3 {
 
         Base base = new Base();
         Base derived = new Derived();
-        System.out.println(base.var);
-        System.out.println(derived.var);
+        System.out.println("Base");
         base.printVar();
+        System.out.println(base.var);
+        System.out.println("derived");
+
+        System.out.println(derived.var + "from derived.var");
+
         derived.printVar();
 
-        DemoThrowsException test = new DemoThrowsException();
-        test.readFile("two");
+
     }
 }
 
@@ -67,7 +70,7 @@ class Manager0 extends Employee0 implements MobileAppExpert {
 
 
 class Base {
-    String var = "EJava";
+    String var = "Base Java";
     void printVar() {
         System.out.println(var);
     }
@@ -89,29 +92,5 @@ class Trace {
     public static void method2() {
         String[] students = {"Shreya", "Joseph"};
         System.out.println(students[5]);
-    }
-}
-
-
-class DemoThrowsException {
-    public void readFile(String file) throws NullPointerException, FileNotFoundException {
-        if (file == null)
-            throw new NullPointerException();
-        boolean found = findFile(file);
-        if (!found)
-            throw new FileNotFoundException("Missing file");
-        else {
-            //code to read file
-            System.out.println("printed");
-        }
-    }
-    boolean findFile(String file) {
-        //code to return true if file can be located
-        if (file == "one")
-        {
-            return true;
-        } else {
-            return false;
-        }
     }
 }
