@@ -10,8 +10,8 @@ public class March4 {
 
         RiverRafting riverRafting = new RiverRafting();
         try {
-            riverRafting.crossRapid(11);
-            // riverRafting.crossRapid(7);
+            //riverRafting.crossRapid(11);
+             riverRafting.crossRapid(7);
             riverRafting.rowRaft("happy");
             System.out.println("Enjoy River Rafting");
         }
