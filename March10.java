@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class March10 {
 }
 
-
 // Null Point Exception
 class ThrowNullPointerException {
     static ArrayList<String> list = null;
@@ -19,7 +18,6 @@ class ThrowNullPointerException1 {
             list.add("1");
     }
 }
-
 
 class ThrowArithmeticEx {
     public static void main(String args[]) {
