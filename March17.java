@@ -3,6 +3,10 @@ package derived;
 public class March17 {
 }
 
+
+// Given the following definition of the classes Animal, Lion, and Jumpable,
+// select the correct combinations of assignments of a variable that don’t result in compi-
+// lation errors or runtime exceptions (select 2 options)
 interface Jumpable {}
 class Animal {}
 class Lion extends Animal implements Jumpable {}
